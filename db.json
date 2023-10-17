@@ -1,0 +1,65 @@
+{
+  "holidays":[
+    {
+      "imageUrl": "images/maldives.jpg",
+      "country":"You & Me by Cocoon Maldives",
+      "price":"2137.00",
+      "date":"16.08.2024 - 24.05.2024",
+      "departureCity":"Gdańsk",
+      "food":"All Inclusive",
+      "rating":"1",
+      "place":"Malediwy / Raa Atol / Raa Atol"
+    },
+    {
+      "imageUrl": "images/dubai.jpg",
+      "country":"Rose Rayhaan Dubai",
+      "price":"1234.00",
+      "date":"16.08.2024 - 24.05.2024",
+      "departureCity":"Warszawa",
+      "food":"All Inclusive",
+      "rating":"4",
+      "place":"Emiraty Arabskie / Dubaj"
+    },
+    {
+      "imageUrl": "images/madeira.jpg",
+      "country":"Dom Pedro Madera",
+      "price":"4321.00",
+      "date":"16.08.2024 - 24.05.2024",
+      "departureCity":"Gdańsk",
+      "food":"All Inclusive",
+      "rating":"5",
+      "place":"Portugalia / Madera / Machico"
+    },
+    {
+      "imageUrl": "images/maldives.jpg",
+      "country":"ptak",
+      "price":"2137.00",
+      "date":"16.08.2024 - 24.05.2024",
+      "departureCity":"Wrocław",
+      "food":"All Inclusive",
+      "rating":"2",
+      "place":"Malediwy / Raa Atol / Maafushi"
+    },
+    {
+      "imageUrl": "images/dubai.jpg",
+      "country":"pies",
+      "price":"1234.00",
+      "date":"16.08.2024 - 24.05.2024",
+      "departureCity":"Kraków",
+      "food":"All Inclusive",
+      "rating":"5",
+      "place":"Emiraty Arabskie / Dubaj"
+    },
+    {
+      "imageUrl": "images/madeira.jpg",
+      "country":"kot",
+      "price":"4321.00",
+      "date":"16.08.2024 - 24.05.2024",
+      "departureCity":"Gdańsk",
+      "food":"All Inclusive",
+      "rating":"1",
+      "place":"Portugalia / Madera / Machico"
+    }
+  ]
+
+}

@@ -1,26 +1,22 @@
-@import "./scss/reset";
-@import "./scss/variables";
-@import "./scss/typography";
-@import "./scss/utils";
-@import "./scss/components/";
-
-#root {
-  width: 100vw;
-}
+@import './pages/';
+@import './components/';
+@import './reset';
+@import './variables';
+@import './typography';
+@import './utils';
 
 body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
 }
 
 .container {
-  width: 100vw;
   display: flex;
   justify-content: center;
 }
 
 .content {
   min-width: $content-width-xsm;
+  max-width: calc(100vw - $spacing-x6);
   margin-left: $spacing-x3;
   margin-right: $spacing-x3;
   width: 100%;

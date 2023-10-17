@@ -1,0 +1,52 @@
+@import '../variables';
+@import '../typography';
+
+.button {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: $text-16;
+  border-radius: 5px;
+  width: 100%;
+  transition: 0.2s;
+  cursor: pointer;
+  padding: $spacing-x2;
+
+  &:hover {
+    color: $white;
+  }
+
+  &:disabled {
+    color: $grey;
+    border: 2px solid $grey;
+    cursor: not-allowed;
+
+    &:hover {
+      border: 2px solid $grey;
+      color: $grey;
+    }
+  }
+
+  &--yellow {
+    border: 2px solid $yellow;
+    color: $white;
+    background: $yellow;
+
+    &:hover {
+      background-color: $yellow-light;
+      border-color: $yellow-light;
+    }
+  }
+
+  &--sm {
+    width: 100px;
+  }
+
+  &--md {
+    width: 150px;
+  }
+
+  &--lg {
+    width: 200px;
+  }
+}
