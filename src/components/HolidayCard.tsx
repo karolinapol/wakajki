@@ -20,7 +20,7 @@ const generateStars = (rating: number) => {
       <img
         key={`star-filled-${i}`}
         className="holiday-card__icon holiday-card__icon--star"
-        src="/images/star.svg"
+        src="/public/icons/star.svg"
         alt="filled star"
       />,
     );
@@ -32,7 +32,7 @@ const generateStars = (rating: number) => {
       <img
         key={`star-empty-${i}`}
         className="holiday-card__icon holiday-card__icon--star"
-        src="/images/star-silver.svg"
+        src="/public/icons/star-silver.svg"
         alt="empty star"
       />,
     );
@@ -65,15 +65,15 @@ export const HolidayCard = ({
           <div className="holiday-card__info">
             <p>{country}</p>
             <p>
-              <img className="holiday-card__icon" alt="holiday card date" src="/images/calendar.svg"></img>
+              <img className="holiday-card__icon" alt="holiday card date" src="/public/icons/calendar.svg"></img>
               {date}
             </p>
             <p>
-              <img className="holiday-card__icon" alt="holiday card plane" src="/images/plane.svg"></img>
+              <img className="holiday-card__icon" alt="holiday card plane" src="/public/icons/plane.svg"></img>
               {departureCity}
             </p>
             <p>
-              <img className="holiday-card__icon" alt="holiday card food" src="/images/forkandknife.svg"></img>
+              <img className="holiday-card__icon" alt="holiday card food" src="/public/icons/forkandknife.svg"></img>
               {food}
             </p>
             <p>{generateStars(rating)}</p>

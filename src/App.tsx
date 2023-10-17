@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { LoginPage } from './pages/LoginPage';
 import { ErrorPage } from './pages/ErrorPage';
 import { HomePage } from './pages/HomePage';
+import { CartPage } from './pages/CartPage';
 import { Navbar } from './components';
 
 function App() {
@@ -17,6 +18,17 @@ function App() {
                 <Navbar></Navbar>
                 <main className="container">
                   <HomePage />
+                </main>
+              </>
+            }
+          ></Route>
+          <Route
+            path="/cart"
+            element={
+              <>
+                <Navbar></Navbar>
+                <main className="container">
+                  <CartPage />
                 </main>
               </>
             }

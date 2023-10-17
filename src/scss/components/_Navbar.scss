@@ -32,4 +32,40 @@
       margin-right: $spacing-x4;
     }
   }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &--right {
+      display: flex;
+    }
+  }
+
+  &__item {
+    border-bottom: 3px solid transparent;
+    padding-bottom: 3px;
+    transition: 0.2s;
+
+    &:hover {
+      border-bottom: 3px solid $yellow;
+    }
+
+    a.active {
+      font-weight: bold;
+    }
+
+    &--with-icon {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: $spacing-x1;
+      }
+    }
+  }
 }

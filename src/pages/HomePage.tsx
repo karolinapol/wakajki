@@ -23,7 +23,6 @@ export const HomePage = () => {
 
   return (
     <div className="content">
-      <h3 className="mb-2">HomePage</h3>
       <div className="holiday-cards-container">
         <div className="holiday-cards">
           {holidayData &&
