@@ -1,8 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../components';
 interface HolidayCardProps {
   imageUrl: string;
   country: string;
-  price: string;
+  price: number;
   date: string;
   departureCity: string;
   food: string;
@@ -51,6 +52,12 @@ export const HolidayCard = ({
   rating,
   place,
 }: HolidayCardProps): JSX.Element => {
+  const navigate = useNavigate();
+
+  const addToCart = () => {
+    navigate('/cart', { state: { imageUrl, place, country, date, departureCity, food, price } });
+  };
+
   return (
     <div className="holiday-card">
       <div className="holiday-card__content">
@@ -82,7 +89,13 @@ export const HolidayCard = ({
             <p>
               od <strong>{price}</strong> zł /os.
             </p>
-            <Button text="Dodaj do koszyka" type="submit" color="yellow" isDisabled={false}></Button>
+            <Button
+              text="Dodaj do koszyka"
+              type="submit"
+              color="yellow"
+              isDisabled={false}
+              onClick={addToCart}
+            ></Button>
           </div>
         </div>
       </div>

@@ -1,0 +1,14 @@
+@import '../variables';
+
+.cart-page {
+  display: flex;
+  width: 100%;
+
+  &__customer-data {
+    border-right: 1px solid $grey-light;
+    flex: 2;
+  }
+  &__summary {
+    flex: 1;
+  }
+}

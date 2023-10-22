@@ -4,7 +4,7 @@ import { HolidayCard } from '../components';
 export interface Holiday {
   imageUrl: string;
   country: string;
-  price: string;
+  price: number;
   date: string;
   departureCity: string;
   food: string;

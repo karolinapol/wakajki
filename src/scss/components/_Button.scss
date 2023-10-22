@@ -38,6 +38,17 @@
     }
   }
 
+  &--red {
+    border: 2px solid $red;
+    color: $white;
+    background: $red;
+
+    &:hover {
+      background-color: $red-light;
+      border-color: $red-light;
+    }
+  }
+
   &--sm {
     width: 100px;
   }

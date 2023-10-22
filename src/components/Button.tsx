@@ -2,7 +2,7 @@ import classnames from 'classnames';
 
 interface ButtonProps {
   type: 'button' | 'reset' | 'submit';
-  color: 'yellow';
+  color: 'yellow' | 'red';
   onClick?: () => void;
   text: string;
   additionalClasses?: string;
