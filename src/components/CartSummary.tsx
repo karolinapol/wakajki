@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ITourMembersContext, TourMembersContext } from '../contexts';
+import { CartItemContext, ICartItemContext, ICartCustomersContext, CartCustomersContext } from '../contexts';
 import { Button } from '../components';
 
 interface SummaryCartProps {
@@ -21,10 +21,29 @@ export const CartSummary = ({
   food,
   price,
 }: SummaryCartProps): JSX.Element => {
-  const { tourMembers } = useContext(TourMembersContext) as ITourMembersContext;
+  const { tourMembers, customerName, customerSurname, customerEmail, customerPhoneNumber } = useContext(
+    CartCustomersContext,
+  ) as ICartCustomersContext;
+  const { setCartData } = useContext(CartItemContext) as ICartItemContext;
 
   const procedToCheckout = () => {
     window.location.replace('https://blik.com/');
+  };
+
+  const removeFromCart = () => {
+    setCartData({ imageUrl: '', place: '', country: '', date: '', departureCity: '', food: '', price: 0 });
+    localStorage.setItem('cart', JSON.stringify(''));
+  };
+
+  const isProceedToCheckoutDisabled = (): boolean => {
+    return (
+      customerName === '' ||
+      customerSurname === '' ||
+      customerEmail === '' ||
+      customerPhoneNumber === '' ||
+      tourMembers[0].name === '' ||
+      tourMembers[0].surname === ''
+    );
   };
 
   return (
@@ -66,8 +85,16 @@ export const CartSummary = ({
             text="Przejdź do płatności"
             type="submit"
             color="yellow"
-            isDisabled={false}
+            isDisabled={isProceedToCheckoutDisabled()}
             onClick={procedToCheckout}
+          ></Button>
+          <Button
+            text="Usuń z koszyka"
+            type="submit"
+            additionalClasses="mt-2"
+            color="red"
+            isDisabled={false}
+            onClick={removeFromCart}
           ></Button>
         </div>
       </div>

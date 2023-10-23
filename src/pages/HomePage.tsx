@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { HolidayCard } from '../components';
+import { CartItemContextProvider } from '../contexts';
 
 export interface Holiday {
   imageUrl: string;
@@ -25,22 +26,24 @@ export const HomePage = () => {
     <div className="content">
       <div className="holiday-cards-container">
         <div className="holiday-cards">
-          {holidayData &&
-            holidayData.map((holiday: Holiday, index) => {
-              return (
-                <HolidayCard
-                  key={index}
-                  imageUrl={holiday.imageUrl}
-                  country={holiday.country}
-                  price={holiday.price}
-                  date={holiday.date}
-                  departureCity={holiday.departureCity}
-                  food={holiday.food}
-                  rating={holiday.rating}
-                  place={holiday.place}
-                ></HolidayCard>
-              );
-            })}
+          <CartItemContextProvider>
+            {holidayData &&
+              holidayData.map((holiday: Holiday, index) => {
+                return (
+                  <HolidayCard
+                    key={index}
+                    imageUrl={holiday.imageUrl}
+                    country={holiday.country}
+                    price={holiday.price}
+                    date={holiday.date}
+                    departureCity={holiday.departureCity}
+                    food={holiday.food}
+                    rating={holiday.rating}
+                    place={holiday.place}
+                  ></HolidayCard>
+                );
+              })}
+          </CartItemContextProvider>
         </div>
       </div>
     </div>

@@ -1,19 +1,32 @@
 import { CartTourMember, Input, Button } from '../components';
-import React, { useContext } from 'react';
-import { ITourMembersContext, TourMembersContext } from '../contexts/TourMembersContext';
+import { useContext } from 'react';
+import { ICartCustomersContext, CartCustomersContext } from '../contexts';
 
 export interface TourMember {
   name: string;
   surname: string;
 }
 
-export const CartCustomerData = (): JSX.Element => {
-  const { tourMembers, setTourMembers } = useContext(TourMembersContext) as ITourMembersContext;
+export interface CustomerData {
+  name: string;
+  surname: string;
+  email: string;
+  phoneNumber: string;
+}
 
-  const [name, setName] = React.useState('');
-  const [surname, setSurname] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [phoneNumber, setPhoneNumber] = React.useState('');
+export const CartCustomerData = (): JSX.Element => {
+  const {
+    tourMembers,
+    setTourMembers,
+    customerName,
+    setCustomerName,
+    customerSurname,
+    setCustomerSurname,
+    customerEmail,
+    setCustomerEmail,
+    customerPhoneNumber,
+    setCustomerPhoneNumber,
+  } = useContext(CartCustomersContext) as ICartCustomersContext;
 
   const onAddTourMember = () => {
     if (
@@ -35,44 +48,44 @@ export const CartCustomerData = (): JSX.Element => {
       <div className="cart-customer-data__customer">
         <h2 className="mb-5">Podaj dane osoby rezerwującej</h2>
         <Input
-          name="name"
-          id="name"
-          value={name}
+          name="customerName"
+          id="customerName"
+          value={customerName}
           labelText="Imię"
-          setState={setName}
+          setState={setCustomerName}
           additionalClasses="mb-3"
           required={true}
           size="lg"
           type="text"
         />
         <Input
-          name="surname"
-          id="surname"
-          value={surname}
+          name="customerSurname"
+          id="customerSurname"
+          value={customerSurname}
           labelText="Nazwisko"
-          setState={setSurname}
+          setState={setCustomerSurname}
           additionalClasses="mb-3"
           required={true}
           size="lg"
           type="text"
         />
         <Input
-          name="email"
-          id="email"
-          value={email}
+          name="customeremail"
+          id="customeremail"
+          value={customerEmail}
           labelText="Email"
-          setState={setEmail}
+          setState={setCustomerEmail}
           additionalClasses="mb-3"
           required={true}
           size="lg"
           type="email"
         />
         <Input
-          name="phoneNumber"
-          id="phoneNumber"
-          value={phoneNumber}
+          name="customerPhoneNumber"
+          id="customerPhoneNumber"
+          value={customerPhoneNumber}
           labelText="Telefon"
-          setState={setPhoneNumber}
+          setState={setCustomerPhoneNumber}
           additionalClasses="mb-3"
           required={true}
           size="lg"
@@ -92,7 +105,7 @@ export const CartCustomerData = (): JSX.Element => {
           additionalClasses="mt-8"
           hasFixedWidth={true}
           width="lg"
-          isDisabled={false}
+          isDisabled={tourMembers.length > 5}
           onClick={onAddTourMember}
         ></Button>
       </div>

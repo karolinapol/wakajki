@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components';
+import { useContext, useEffect, useState } from 'react';
+import { CartItemContext, ICartItemContext } from '../contexts';
+
 interface HolidayCardProps {
   imageUrl: string;
   country: string;
@@ -52,10 +55,26 @@ export const HolidayCard = ({
   rating,
   place,
 }: HolidayCardProps): JSX.Element => {
+  const { cartData } = useContext(CartItemContext) as ICartItemContext;
+  const [isCartDataEmpty, setIsCartDataEmpty] = useState(false);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    setIsCartDataEmpty(
+      cartData.imageUrl !== '' &&
+        cartData.place !== '' &&
+        cartData.country !== '' &&
+        cartData.date !== '' &&
+        cartData.departureCity !== '' &&
+        cartData.food !== '' &&
+        cartData.price > 0,
+    );
+  }, [cartData]);
+
   const addToCart = () => {
-    navigate('/cart', { state: { imageUrl, place, country, date, departureCity, food, price } });
+    const cartDataToAdd = { imageUrl, place, country, date, departureCity, food, price };
+    localStorage.setItem('cart', JSON.stringify(cartDataToAdd));
+    navigate('/cart');
   };
 
   return (
@@ -93,7 +112,7 @@ export const HolidayCard = ({
               text="Dodaj do koszyka"
               type="submit"
               color="yellow"
-              isDisabled={false}
+              isDisabled={isCartDataEmpty}
               onClick={addToCart}
             ></Button>
           </div>

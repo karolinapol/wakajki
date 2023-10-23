@@ -1,34 +1,49 @@
-// TODO SAVE CART DATA, ADD REMOVING FROM CART
-import { useLocation } from 'react-router-dom';
 import { CartCustomerData } from '../components';
 import { CartSummary } from '../components/CartSummary';
-import TourMembersContextProvider from '../contexts/TourMembersContext';
+import { CartItemContext, ICartItemContext, CartCustomersContextProvider } from '../contexts';
+import { useContext, useEffect, useState } from 'react';
 
 export const CartPage = () => {
-  const { state } = useLocation();
+  const { cartData } = useContext(CartItemContext) as ICartItemContext;
+  const [isCartDataNotEmpty, setIsCartDataNotEmpty] = useState(false);
 
-  return (
+  useEffect(() => {
+    setIsCartDataNotEmpty(
+      cartData.imageUrl !== '' &&
+        cartData.place !== '' &&
+        cartData.country !== '' &&
+        cartData.date !== '' &&
+        cartData.departureCity !== '' &&
+        cartData.food !== '' &&
+        cartData.price > 0,
+    );
+  }, [cartData]);
+
+  return isCartDataNotEmpty ? (
     <>
-      {state && (
-        <TourMembersContextProvider>
-          <div className="content cart-page">
-            <div className="cart-page__customer-data">
-              <CartCustomerData></CartCustomerData>
-            </div>
-            <div className="cart-page__summary">
-              <CartSummary
-                imageUrl={state.imageUrl}
-                place={state.place}
-                country={state.country}
-                date={state.date}
-                departureCity={state.departureCity}
-                food={state.food}
-                price={state.price}
-              ></CartSummary>
-            </div>
+      <CartCustomersContextProvider>
+        <div className="content cart-page">
+          <div className="cart-page__customer-data">
+            <CartCustomerData></CartCustomerData>
           </div>
-        </TourMembersContextProvider>
-      )}
+          <div className="cart-page__summary">
+            <CartSummary
+              imageUrl={cartData.imageUrl}
+              place={cartData.place}
+              country={cartData.country}
+              date={cartData.date}
+              departureCity={cartData.departureCity}
+              food={cartData.food}
+              price={cartData.price}
+            ></CartSummary>
+          </div>
+        </div>
+      </CartCustomersContextProvider>
     </>
+  ) : (
+    <div className="cart-page__empty">
+      <h2 className="mb-4">Koszyk pusty</h2>
+      <h3>Przejdź na stronę wycieczek i wybierz coś teraz!</h3>
+    </div>
   );
 };

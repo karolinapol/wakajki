@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button } from '../components';
-import { ITourMembersContext, TourMembersContext } from '../contexts';
+import { ICartCustomersContext, CartCustomersContext } from '../contexts';
 import { TourMember } from './CartCustomerData';
 
 interface CartTourMemberProps {
@@ -8,7 +8,7 @@ interface CartTourMemberProps {
 }
 
 export const CartTourMember = ({ index }: CartTourMemberProps): JSX.Element => {
-  const { tourMembers, setTourMembers } = useContext(TourMembersContext) as ITourMembersContext;
+  const { tourMembers, setTourMembers } = useContext(CartCustomersContext) as ICartCustomersContext;
 
   const updateSingleTourMemberName = (e: React.ChangeEvent<HTMLInputElement>) => {
     const updatedTourMembers = [...tourMembers];
@@ -62,7 +62,7 @@ export const CartTourMember = ({ index }: CartTourMemberProps): JSX.Element => {
         additionalClasses="mt-2"
         hasFixedWidth={true}
         width="sm"
-        isDisabled={false}
+        isDisabled={tourMembers.length === 1}
         onClick={removeTourMember}
       ></Button>
     </div>

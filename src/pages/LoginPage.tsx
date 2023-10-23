@@ -1,11 +1,11 @@
-import React from 'react';
+import { useState } from 'react';
 import { Input, Button } from '../components';
 import { useNavigate } from 'react-router-dom';
 
 export const LoginPage = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const login = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
