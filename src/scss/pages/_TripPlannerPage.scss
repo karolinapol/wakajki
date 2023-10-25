@@ -1,0 +1,87 @@
+@import '../variables';
+
+.trip-planner-page {
+  display: flex;
+  flex-direction: column;
+
+  .date-picker {
+    border: 1px solid $grey;
+    padding: $spacing-x2 $spacing-x3;
+    background-color: $white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 300;
+    width: 250px;
+    display: block;
+
+    &::placeholder {
+      color: $grey-dark;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $yellow;
+    }
+
+    &:hover {
+      outline: none;
+      border-color: $yellow;
+    }
+  }
+
+  input[type='radio'] {
+    accent-color: $yellow;
+    width: 14px;
+    height: 14px;
+    margin: 0 $spacing-x1 0 0;
+    cursor: pointer;
+  }
+
+  .radio-group {
+    border: 1px solid $grey;
+    width: 250px;
+    padding: $spacing-x3;
+    border-radius: $spacing-x1;
+  }
+
+  .radio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-x1;
+
+    label {
+      height: fit-content;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+
+  .text-area {
+    border: 1px solid $grey;
+    padding: $spacing-x2 $spacing-x3;
+    background-color: $white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 300;
+    width: 250px !important;
+    display: block;
+    resize: none;
+    height: 200px;
+
+    &::placeholder {
+      color: $grey-dark;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $yellow;
+    }
+
+    &:hover {
+      outline: none;
+      border-color: $yellow;
+    }
+  }
+}

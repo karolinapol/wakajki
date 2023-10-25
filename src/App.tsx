@@ -5,6 +5,7 @@ import { HomePage } from './pages/HomePage';
 import { CartPage } from './pages/CartPage';
 import { Navbar } from './components';
 import { CartItemContextProvider } from './contexts';
+import { TripPlannerPage } from './pages';
 
 function App() {
   return (
@@ -34,7 +35,18 @@ function App() {
               </CartItemContextProvider>
             }
           ></Route>
-          <Route path="/login" element={<LoginPage />}></Route>s
+          <Route path="/login" element={<LoginPage />}></Route>
+          <Route
+            path="/trip-planner"
+            element={
+              <>
+                <Navbar></Navbar>
+                <main className="container">
+                  <TripPlannerPage />
+                </main>
+              </>
+            }
+          ></Route>
         </Routes>
       </Router>
     </>

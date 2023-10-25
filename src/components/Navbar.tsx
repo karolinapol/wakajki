@@ -10,8 +10,11 @@ export const Navbar = (): JSX.Element => {
         </a>
         <div className="navbar__items">
           <div className="navbar__items--left">
-            <div className="navbar__item">
+            <div className="navbar__item mr-4">
               <NavLink to="/">Wycieczki</NavLink>
+            </div>
+            <div className="navbar__item">
+              <NavLink to="/trip-planner">Zaplanuj podróż</NavLink>
             </div>
           </div>
           <div className="navbar__items--right">
