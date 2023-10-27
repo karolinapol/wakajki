@@ -1,65 +1,144 @@
 {
-  "holidays":[
+  "holidays": [
     {
       "imageUrl": "images/maldives.jpg",
-      "country":"You & Me by Cocoon Maldives",
-      "price":2137.00,
-      "date":"16.08.2024 - 24.05.2024",
-      "departureCity":"Gdańsk",
-      "food":"All Inclusive",
-      "rating":"1",
-      "place":"Malediwy / Raa Atol / Raa Atol"
+      "country": "You & Me by Cocoon Maldives",
+      "price": 2137.0,
+      "date": "16.08.2024 - 24.05.2024",
+      "departureCity": "Gdańsk",
+      "food": "All Inclusive",
+      "rating": "1",
+      "place": "Malediwy / Raa Atol / Raa Atol"
     },
     {
       "imageUrl": "images/dubai.jpg",
-      "country":"Rose Rayhaan Dubai",
-      "price":1234.00,
-      "date":"16.08.2024 - 24.05.2024",
-      "departureCity":"Warszawa",
-      "food":"All Inclusive",
-      "rating":"4",
-      "place":"Emiraty Arabskie / Dubaj"
+      "country": "Rose Rayhaan Dubai",
+      "price": 1234.0,
+      "date": "16.08.2024 - 24.05.2024",
+      "departureCity": "Warszawa",
+      "food": "All Inclusive",
+      "rating": "4",
+      "place": "Emiraty Arabskie / Dubaj"
     },
     {
       "imageUrl": "images/madeira.jpg",
-      "country":"Dom Pedro Madera",
-      "price":4321.00,
-      "date":"16.08.2024 - 24.05.2024",
-      "departureCity":"Gdańsk",
-      "food":"All Inclusive",
-      "rating":"5",
-      "place":"Portugalia / Madera / Machico"
+      "country": "Dom Pedro Madera",
+      "price": 4321.0,
+      "date": "16.08.2024 - 24.05.2024",
+      "departureCity": "Gdańsk",
+      "food": "All Inclusive",
+      "rating": "5",
+      "place": "Portugalia / Madera / Machico"
     },
     {
-      "imageUrl": "images/maldives.jpg",
-      "country":"ptak",
-      "price":2137.00,
-      "date":"16.08.2024 - 24.05.2024",
-      "departureCity":"Wrocław",
-      "food":"All Inclusive",
-      "rating":"2",
-      "place":"Malediwy / Raa Atol / Maafushi"
+      "imageUrl": "images/thailand.jpg",
+      "country": "Grande Resort Phuket",
+      "price": 5428.0,
+      "date": "31.03.2024 - 11.04.2024",
+      "departureCity": "Warszawa",
+      "food": "All Inclusive",
+      "rating": "5",
+      "place": "Tajlandia / Phuket / Grande Resort Phuket"
     },
     {
-      "imageUrl": "images/dubai.jpg",
-      "country":"pies",
-      "price":1234.00,
-      "date":"16.08.2024 - 24.05.2024",
-      "departureCity":"Kraków",
-      "food":"All Inclusive",
-      "rating":"5",
-      "place":"Emiraty Arabskie / Dubaj"
+      "imageUrl": "images/china.jpg",
+      "country": "Chiny - dwie stolice",
+      "price": 11938.0,
+      "date": "09.02.2024 - 17.02.2024",
+      "departureCity": "Warszawa",
+      "food": "All Inclusive",
+      "rating": "5",
+      "place": "Chiny/ Wycieczka objazdowa / Pekin / Chiny - dwie stolice"
     },
     {
-      "imageUrl": "images/madeira.jpg",
-      "country":"kot",
-      "price":4321.00,
-      "date":"16.08.2024 - 24.05.2024",
-      "departureCity":"Gdańsk",
-      "food":"All Inclusive",
-      "rating":"1",
-      "place":"Portugalia / Madera / Machico"
+      "imageUrl": "images/barcelona.jpg",
+      "country": "Hotel INNSiDE",
+      "price": 719.0,
+      "date": "16.08.2024 - 24.05.2024",
+      "departureCity": "Gdańsk",
+      "food": "Własne",
+      "rating": "4",
+      "place": "Hiszpania / Barcelona / Hotel INNSiDE"
+    },
+    {
+      "imageUrl": "images/gdansk.jpg",
+      "country": "IBB Hotel Gdańsk",
+      "price": 520.0,
+      "date": "16.08.2024 - 24.05.2024",
+      "departureCity": "Kraków",
+      "food": "All Inclusive",
+      "rating": "5",
+      "place": "Polska / Gdańsk / IBB Hotel Gdańsk"
+    },
+    {
+      "imageUrl": "images/egypt.jpg",
+      "country": "Aladdin Beach Resort",
+      "price": 1932.0,
+      "date": "09.12.2023 - 16.12.2023",
+      "departureCity": "Warszawa",
+      "food": "All Inclusive Elite",
+      "rating": "5",
+      "place": "Egipt / Hurghada / Aladdin Beach Resort"
+    },
+    {
+      "imageUrl": "images/kenia.jpg",
+      "country": "Diani Sea Lodge",
+      "price": 5739.0,
+      "date": "22.10.2024 - 29.10.2024",
+      "departureCity": "Katowice",
+      "food": "All Inclusive",
+      "rating": "3",
+      "place": "Kenia / Wybrzeże Mombasy / Diani Sea Lodge"
+    },
+    {
+      "imageUrl": "images/losangeles.jpg",
+      "country": "Sunset Strip",
+      "price": 8525.0,
+      "date": "31.10.2023 - 09.11.2023",
+      "departureCity": "Warszawa",
+      "food": "All Inclusive",
+      "rating": "5",
+      "place": "USA / Kalifornia - Los Angeles / Sunset Strip"
+    },
+    {
+      "imageUrl": "images/london.jpg",
+      "country": "W służbie Jego Królewskiej Mości",
+      "price": 5316.0,
+      "date": "01.06.2024 - 08.06.2024",
+      "departureCity": "Gdańsk",
+      "food": "All Inclusive",
+      "rating": "3",
+      "place": "Wielka Brytania / Wycieczka objazdowa / London / W służbie Jego Królewskiej Mości"
+    },
+    {
+      "imageUrl": "images/miami.jpg",
+      "country": "Holiday Inn Miami",
+      "price": 7395.0,
+      "date": "07.09.2024 - 15.09.2024",
+      "departureCity": "Warszawa",
+      "food": "Własne",
+      "rating": "5",
+      "place": "USA / Floryda / Holiday Inn Miami"
+    },
+    {
+      "imageUrl": "images/paris.jpg",
+      "country": "Vice Versa",
+      "price": 4149.0,
+      "date": "01.01.2024 - 08.01.2024",
+      "departureCity": "Wrocław",
+      "food": "All Inclusive",
+      "rating": "3",
+      "place": "Francja / Paryż / Vice Versa"
+    },
+    {
+      "imageUrl": "images/new-york.jpg",
+      "country": "Midtown Times Square Hotel",
+      "price": 13158.0,
+      "date": "01.03.2024 - 07.03.2024",
+      "departureCity": "Kraków",
+      "food": "All Inclusive",
+      "rating": "4",
+      "place": "USA / Nowy Jork / Midtown Times Square Hotel"
     }
   ]
-
 }

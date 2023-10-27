@@ -23,7 +23,7 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div className="content">
+    <div className="home-page content">
       <div className="holiday-cards-container">
         <div className="holiday-cards">
           <CartItemContextProvider>

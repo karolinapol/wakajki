@@ -8,7 +8,7 @@ interface ButtonProps {
   additionalClasses?: string;
   isDisabled: boolean;
   hasFixedWidth?: boolean;
-  width?: 'sm' | 'md' | 'lg';
+  width?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 export const Button = ({

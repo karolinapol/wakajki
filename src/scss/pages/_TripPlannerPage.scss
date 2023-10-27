@@ -1,8 +1,52 @@
 @import '../variables';
+@import '../typography';
 
 .trip-planner-page {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: $spacing-x10;
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-height: 1300px;
+    margin-right: $spacing-x5;
+  }
+
+  &__image-container {
+    flex: 3;
+    overflow: hidden;
+
+    &:hover .trip-planner-page__image {
+      transform: scale(1.2);
+      opacity: 0.7;
+
+      p {
+        display: block;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/flamingo.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: $white;
+      font-size: $text-48;
+      display: none;
+    }
+  }
 
   .date-picker {
     border: 1px solid $grey;
