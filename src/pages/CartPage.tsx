@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CartCustomerData } from '../components';
 import { CartSummary } from '../components/CartSummary';
 import { CartItemContext, ICartItemContext, CartCustomersContextProvider } from '../contexts';
@@ -43,7 +44,13 @@ export const CartPage = () => {
   ) : (
     <div className="cart-page__empty">
       <h2 className="mb-4">Koszyk pusty</h2>
-      <h3>Przejdź na stronę wycieczek i wybierz coś teraz!</h3>
+      <h3>
+        <span>Przejdź na stronę </span>
+        <Link className="link" to="/">
+          wycieczek
+        </Link>
+        <span> i wybierz coś teraz!</span>
+      </h3>
     </div>
   );
 };
