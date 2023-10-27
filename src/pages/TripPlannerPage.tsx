@@ -30,7 +30,8 @@ export const TripPlannerPage = () => {
   const [notes, setNotes] = useState('');
 
   useEffect(() => {
-    plannerData = JSON.parse(localStorage.getItem('plannerData') ?? '');
+    plannerData = localStorage.getItem('plannerData') ? JSON.parse(localStorage.getItem('plannerData') ?? '') : '';
+
     plannerData && setStartDate(new Date(plannerData.startDate));
     plannerData && setEndDate(new Date(plannerData.endDate));
     plannerData && setCountry(plannerData.country);

@@ -22,7 +22,7 @@ interface CartItemContextProviderProps {
 }
 
 export const CartItemContextProvider = ({ children }: CartItemContextProviderProps): JSX.Element => {
-  const items = JSON.parse(localStorage.getItem('cart') ?? '');
+  const items = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart') ?? '') : '';
 
   const [cartData, setCartData] = useState<CartData>(
     items
